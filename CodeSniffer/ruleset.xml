@@ -30,7 +30,6 @@
 
     <!-- You're writing Nasqueron code. Let's use the Nasqueron code style. -->
     <config name="tabWidth" value="4"/>
-    <rule ref="Generic.Arrays.ArrayIndent" />
     <rule ref="Generic.Classes.OpeningBraceSameLine" />
     <rule ref="Generic.Files.LineLength" />
     <rule ref="Generic.Formatting.NoSpaceAfterCast" />

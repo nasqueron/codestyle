@@ -1,0 +1,13 @@
+{
+    "name": "nasqueron/codestyle",
+    "description": "Code style helper files for Nasqueron projects",
+    "type": "library",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Sébastien Santoro",
+            "email": "dereckson@espace-win.org"
+        }
+    ],
+    "require": {}
+}

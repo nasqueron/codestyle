@@ -31,7 +31,6 @@
     <!-- You're writing Nasqueron code. Let's use the Nasqueron code style. -->
     <config name="tabWidth" value="4"/>
     <rule ref="Generic.Classes.OpeningBraceSameLine" />
-    <rule ref="Generic.Files.LineLength" />
     <rule ref="Generic.Formatting.NoSpaceAfterCast" />
     <rule ref="Generic.Functions.FunctionCallArgumentSpacing" />
     <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
@@ -48,6 +47,19 @@
     <rule ref="PSR1" /> <!-- but certainly not the whole PSR-2 -->
     <rule ref="PSR2.Files.ClosingTag" />
 
+    <!-- Long lines. -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="80"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <severity>3</severity>
+    </rule>
+    <rule ref="Generic.Files.LineLength.MaxExceeded">
+         <message>This line contains %2$s characters. Try below 80.</message>
+    </rule>
 
     <!-- Write simple code. -->
     <rule ref="Generic.CodeAnalysis.AssignmentInCondition" />

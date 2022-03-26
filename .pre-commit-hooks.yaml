@@ -1,0 +1,6 @@
+- id: shellcheck
+  name: ShellCheck
+  description: Static analysis tool for shell scripts
+  entry: pre-commit-hooks/shellcheck.sh
+  language: script
+  exclude: \.jinja$

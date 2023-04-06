@@ -16,6 +16,7 @@ set -e
 
 exit_status=0
 enable_list=""
+severity="style"
 
 parse_arguments() {
 	while (($# > 0)); do
@@ -27,6 +28,9 @@ parse_arguments() {
 		case "$PARAMETER" in
 		--enable)
 			enable_list="$enable_list $VALUE"
+			;;
+		--severity)
+			severity=$VALUE
 			;;
 		-*)
 			echo "Error: Unknown option: $PARAMETER" >&2
@@ -45,7 +49,7 @@ parse_arguments "$@"
 for FILE in $files; do
 	SHEBANG_REGEX='^#!\(/\|/.*/\|/.* \)\(\(ba\|da\|k\|a\)*sh\|bats\)$'
 	if (head -1 "$FILE" | grep "$SHEBANG_REGEX" >/dev/null); then
-		if ! shellcheck ${enable_list:+ --enable="$enable_list"} "$FILE"; then
+		if ! shellcheck ${enable_list:+ --enable="$enable_list"} --severity="$severity" "$FILE"; then
 			exit_status=1
 		fi
 	elif [[ "$FILE" =~ .+\.(sh|bash|dash|ksh|ash|bats)$ ]]; then

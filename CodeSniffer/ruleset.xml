@@ -58,7 +58,7 @@
         <severity>3</severity>
     </rule>
     <rule ref="Generic.Files.LineLength.MaxExceeded">
-         <message>This line contains %2$s characters. Try below 80.</message>
+        <message>This line contains %2$s characters. Try below 80.</message>
     </rule>
 
     <!-- Write simple code. -->

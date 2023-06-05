@@ -1,0 +1,54 @@
+#   -------------------------------------------------------------
+#   Coding styles
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#   Project:        Nasqueron
+#   License:        Trivial work, not eligible to copyright
+#   Specification:  editorconfig.org
+#   -------------------------------------------------------------
+
+root = true
+
+#   -------------------------------------------------------------
+#   General rules for source code
+#
+#   Every file uses LF as line separator, should have EOL at EOF.
+#   By default, source code uses 4 spaces as indent.
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+#   -------------------------------------------------------------
+#   Structured data
+#
+#   Some structured data formats uses 2 spaces as indent
+#   as they are heavily imbricated (but not XML or TOML).
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[*.{sls,jinja,json,yml,yaml}]
+indent_size = 2
+
+# Arcanist configuration files are JSON
+[{.arcconfig,.arclint}]
+indent_size = 2
+
+#   -------------------------------------------------------------
+#   Special cases
+#
+#     :: Makefile
+#     :: Documentation
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# In Makefile, <tab> and spaces have different meanings
+[Makefile,GNUmakefile,BSDmakefile]
+indent_style = tab
+
+# Special cases for documentation with significant whitespaces at EOL
+[*.md]
+trim_trailing_whitespace = false
+indent_size =

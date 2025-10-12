@@ -31,7 +31,11 @@
     <!-- You're writing Nasqueron code. Let's use the Nasqueron code style. -->
     <config name="tabWidth" value="4"/>
     <rule ref="Generic.Classes.OpeningBraceSameLine" />
-    <rule ref="Generic.Formatting.NoSpaceAfterCast" />
+    <rule ref="Generic.Formatting.SpaceAfterCast">
+        <properties>
+            <property name="spacing" value="0" />
+        </properties>
+    </rule>
     <rule ref="Generic.Functions.FunctionCallArgumentSpacing" />
     <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
     <rule ref="Generic.NamingConventions.CamelCapsFunctionName">
@@ -73,7 +77,6 @@
 
     <!-- In modern PHP we trust. -->
     <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
-    <rule ref="Generic.Functions.CallTimePassByReference" />
     <rule ref="Generic.NamingConventions.ConstructorName" />
     <rule ref="Generic.PHP.DeprecatedFunctions" />
     <rule ref="Generic.PHP.DisallowShortOpenTag" /> <!-- but <?= ?> ok -->

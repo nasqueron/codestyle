@@ -1,4 +1,5 @@
-<code_scheme name="Nasqueron">
+<code_scheme name="Nasqueron" version="173">
+    <option name="AUTODETECT_INDENTS" value="false" />
     <option name="OTHER_INDENT_OPTIONS">
         <value>
             <option name="INDENT_SIZE" value="4" />
@@ -22,7 +23,7 @@
         <option name="LOWER_CASE_BOOLEAN_CONST" value="true" />
         <option name="LOWER_CASE_NULL_CONST" value="true" />
         <option name="ELSE_IF_STYLE" value="COMBINE" />
-        <option name="BLANK_LINE_BEFORE_RETURN_STATEMENT" value="true" />
+        <option name="BLANK_LINES_BEFORE_RETURN_STATEMENT" value="1" />
         <option name="KEEP_RPAREN_AND_LBRACE_ON_ONE_LINE" value="true" />
         <option name="FORCE_SHORT_DECLARATION_ARRAY_STYLE" value="true" />
         <option name="SPACE_BEFORE_COLON_IN_RETURN_TYPE" value="true" />
@@ -44,7 +45,6 @@
         <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1" />
         <option name="CLASS_BRACE_STYLE" value="1" />
         <option name="METHOD_BRACE_STYLE" value="1" />
-        <option name="CATCH_ON_NEW_LINE" value="true" />
         <option name="SPECIAL_ELSE_IF_TREATMENT" value="true" />
         <option name="ALIGN_MULTILINE_CHAINED_METHODS" value="true" />
         <option name="ALIGN_MULTILINE_FOR" value="false" />
@@ -77,5 +77,6 @@
         <option name="DOWHILE_BRACE_FORCE" value="3" />
         <option name="WHILE_BRACE_FORCE" value="3" />
         <option name="FOR_BRACE_FORCE" value="3" />
+        <option name="SOFT_MARGINS" value="80,120" />
     </codeStyleSettings>
 </code_scheme>

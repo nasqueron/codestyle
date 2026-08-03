@@ -17,3 +17,16 @@ repos:
       - id: shellcheck
         args: ["--enable require-variable-braces,deprecate-which"]
 ```
+
+### TfFormat
+
+Allow to format automatically .tf files detecting if OpenTofu or Terraform
+is installed and using the first one found.
+
+```yaml
+repos:
+  - repo: https://github.com/nasqueron/codestyle
+    rev: 0.2.0
+    hooks:
+      - id: tf-format
+```

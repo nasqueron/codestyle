@@ -10,5 +10,5 @@
   description: Terraform / OpenTofu .tf format
   entry: pre-commit-hooks/tf-format.sh
   language: script
-  types_or: [terraform, hcl]
+  files: '\.(?:tf|tofu|tfvars|tftest\.hcl|tofutest\.hcl)$'
   pass_filenames: true
